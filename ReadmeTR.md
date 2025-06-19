@@ -139,6 +139,16 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 source $HOME/.cargo/env
 ```
 
+## SP1 İndirme : 
+```bash
+curl -L https://sp1up.succinct.xyz | bash
+```
+```bash
+source /root/.bashrc
+```
+```bash
+sp1up
+```
 ## 6. Dosyalarım İndirelim : 
 ```bash
 git clone https://github.com/succinctlabs/network.git
