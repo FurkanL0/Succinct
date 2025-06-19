@@ -125,30 +125,6 @@ sudo groupadd docker
 sudo usermod -aG docker $USER
 ```
 
-## 5. Rust
-
-```bash
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-```
-
-![image](https://github.com/user-attachments/assets/0efae43c-b5ba-488c-9f3e-de0aa12698f4)
-
-
-- 1 - Enter
-```bash
-source $HOME/.cargo/env
-```
-
-## SP1 İndirme : 
-```bash
-curl -L https://sp1up.succinct.xyz | bash
-```
-```bash
-source /root/.bashrc
-```
-```bash
-sp1up
-```
 
 ## 5. Kalibre Testi / Sınama Testi : 
 
