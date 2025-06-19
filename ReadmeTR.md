@@ -135,6 +135,16 @@ docker run --rm public.ecr.aws/succinct-labs/spn-node:latest-gpu calibrate \
     --prove-price 1.00
 ```
 
+- Eğer Hata Alırsanız Vast'da Bunu Kullanın : 
+```bash
+docker run --rm \
+    -v /var/run/docker.sock:/var/run/docker.sock \
+    public.ecr.aws/succinct-labs/spn-node:latest-gpu calibrate \
+    --usd-cost-per-hour 0.80 \
+    --utilization-rate 0.5 \
+    --profit-margin 0.1 \
+    --prove-price 1.00
+```
 #### Sonuçlar : 
 
 - Test Sonucu Örnek Olarak Şöyle Çıkacak : 
