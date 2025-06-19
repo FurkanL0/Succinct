@@ -157,10 +157,17 @@ cd bin/node
 RUSTFLAGS="-C target-cpu=native" cargo build --release
 ```
 
+```bash
+cd & cd network
+```
+
 #### Doğru İndirilmiş mi Testi : 
 ```bash
 ./target/release/spn-node --version
 ```
+
+![image](https://github.com/user-attachments/assets/1f7cd3d3-812b-4dbf-9e30-d7f37d5a1b06)
+
 
 ## Docker Image'ler : 
 ```bash
