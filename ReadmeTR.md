@@ -112,3 +112,70 @@ docker-compose --version
 sudo groupadd docker
 sudo usermod -aG docker $USER
 ```
+
+## 5. Kalibre Testi / Sınama Testi : 
+
+```bash
+docker run --rm public.ecr.aws/succinct-labs/spn-node:latest-gpu calibrate \
+    --usd-cost-per-hour 0.80 \
+    --utilization-rate 0.5 \
+    --profit-margin 0.1 \
+    --prove-price 1.00
+```
+
+#### Sonuçlar : 
+
+- Test Sonucu Örnek Olarak Şöyle Çıkacak : 
+```bash
+Parameters:
+┌──────────────────┬────────┐
+│ Parameter        │ Value  │
+├──────────────────┼────────┤
+│ Cost Per Hour    │ $0.80  │
+├──────────────────┼────────┤
+│ Utilization Rate │ 50.00% │
+├──────────────────┼────────┤
+│ Profit Margin    │ 10.00% │
+├──────────────────┼────────┤
+│ Price of $PROVE  │ $1.00  │
+└──────────────────┴────────┘
+
+Starting calibration...
+
+Calibration Results:
+┌──────────────────────┬─────────────────────────┐
+│ Metric               │ Value                   │
+├──────────────────────┼─────────────────────────┤
+│ Estimated Throughput │ 1742469 PGUs/second     │
+├──────────────────────┼─────────────────────────┤
+│ Estimated Bid Price  │ 0.28 $PROVE per 1B PGUs │
+└──────────────────────┴─────────────────────────┘
+```
+
+- Bizim için önemli olanlar : 1742469 PGUs/second
+- 0.28 $PROVE per 1B PGUs 
+
+## Bilgileri Kayıt Etme : 
+```bash
+export PGUS_PER_SECOND="PGUS_PER_SECOND"
+export PROVE_PER_BPGU="PROVE_PER_BPGU"
+export PROVER_ADDRESS="PROVER_ADDRESS"
+export PRIVATE_KEY="PRIVATE_KEY"
+```
+
+- Sırasi ile : 
+
+- export PGUS_PER_SECOND="PGUS_PER_SECOND" örnek olarak export PGUS_PER_SECOND="1742469"
+- export PROVE_PER_BPGU="PROVE_PER_BPGU" örnek olarak export PROVE_PER_BPGU="0.28"
+- export PROVER_ADDRESS="PROVER_ADDRESS" örnek olarak export PROVER_ADDRESS="burayaproveradresiniz"
+- export PRIVATE_KEY="PRIVATE_KEY" export PRIVATE_KEY="cüzdaninizinprivatekeyi"
+
+## Prover Başlatma : 
+```bash
+docker run --rm public.ecr.aws/succinct-labs/spn-node:latest-gpu prove \
+    --rpc-url https://rpc-production.succinct.xyz \
+    --throughput $PGUS_PER_SECOND \
+    --bid $PROVE_PER_BPGU \
+    --private-key $PRIVATE_KEY \
+    --prover $PROVER_ADDRESS
+```
