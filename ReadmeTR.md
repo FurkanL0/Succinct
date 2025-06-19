@@ -31,6 +31,7 @@
 
 - Sepolia Faucet : https://cloud.google.com/application/web3/faucet/ethereum/sepolia
 - Faucet : https://docs.google.com/forms/d/e/1FAIpQLSfgTpBL_wMWyyoxT6LxuMhiu-bex0cBg9kRTmxoKw3XOluOCA/viewform?usp=sharing&ouid=115001992532897479800 
+- Prover Adresinizide Kaydedin.
 
 ![2](https://github.com/user-attachments/assets/ce2252fb-e74b-413c-91dd-7741d3382373)
 
