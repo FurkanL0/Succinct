@@ -23,6 +23,17 @@
 
 - Link : https://staking.sepolia.succinct.xyz/prover
 
+![image](https://github.com/user-attachments/assets/ca94337f-dc0f-4c25-856a-b1aac3840375)
+
+## Stake : 
+
+- Minimum 1000 Tane Sepolia Ağında Stake Etmelisiniz : 
+
+- Sepolia Faucet : https://cloud.google.com/application/web3/faucet/ethereum/sepolia
+- Faucet : https://docs.google.com/forms/d/e/1FAIpQLSfgTpBL_wMWyyoxT6LxuMhiu-bex0cBg9kRTmxoKw3XOluOCA/viewform?usp=sharing&ouid=115001992532897479800 
+
+![2](https://github.com/user-attachments/assets/ce2252fb-e74b-413c-91dd-7741d3382373)
+
 
 ## Bağlanmak için SSH Key Ayarlama : 
 
