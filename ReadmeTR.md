@@ -125,6 +125,44 @@ sudo groupadd docker
 sudo usermod -aG docker $USER
 ```
 
+## 5. Rust
+
+```bash
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+```
+
+![image](https://github.com/user-attachments/assets/0efae43c-b5ba-488c-9f3e-de0aa12698f4)
+
+
+- 1 - Enter
+```bash
+source $HOME/.cargo/env
+```
+
+## 6. Dosyalarım İndirelim : 
+```bash
+git clone https://github.com/succinctlabs/network.git
+cd network
+cd bin/node
+RUSTFLAGS="-C target-cpu=native" cargo build --release
+```
+
+#### Doğru İndirilmiş mi Testi : 
+```bash
+./target/release/spn-node --version
+```
+
+## Docker Image'ler : 
+```bash
+docker build --target cpu -t spn-node:latest-cpu .
+```
+```bash
+docker build --target gpu -t spn-node:latest-gpu .
+```
+- Test : 
+```bash
+docker run spn-node:latest-cpu --version
+```
 ## 5. Kalibre Testi / Sınama Testi : 
 
 ```bash
