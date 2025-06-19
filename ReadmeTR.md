@@ -17,7 +17,11 @@
 | **VAST GPU**          | [Link](https://cloud.vast.ai/?ref_id=228932) | Cheap / Paypal |
 
 ## Project : 
-- Twitter : https://x.com/boundless_xyz
+- Twitter : https://x.com/SuccinctLabs
+
+## Prover Oluşturma : 
+
+- Link : https://staking.sepolia.succinct.xyz/prover
 
 ![image](https://github.com/user-attachments/assets/5fbb7dcd-ab59-4d63-9bc4-a3b1ec89b2a5)
 
@@ -26,12 +30,12 @@
 - Good Internet Speed
 - Minimum Container size 200+
 
-## 1. Server Update : 
+## 1. Server Güncelleme : 
 
 ```bash
 sudo apt update -y && sudo apt upgrade -y
 ```
-## 2. Install Packages:
+## 2. Paketleri İndirelim:
 
 ```bash
 sudo apt install htop ca-certificates zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev tmux iptables curl nvme-cli git wget make jq libleveldb-dev build-essential pkg-config ncdu tar clang bsdmainutils lsb-release libssl-dev libreadline-dev libffi-dev jq gcc screen file nano btop unzip lz4 -y
@@ -47,7 +51,7 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io -y
 docker version
 ```
 
-## 4. Install Docker Compose : 
+## 4. Docker Compose : 
 
 ```bash
 VER=$(curl -s https://api.github.com/repos/docker/compose/releases/latest | grep tag_name | cut -d '"' -f 4)
@@ -56,7 +60,7 @@ chmod +x /usr/local/bin/docker-compose
 docker-compose --version
 ```
 
-## 4. Docker User Permissions
+## 4. Docker Kullanıcı İzinleri
 
 ```bash
 sudo groupadd docker
